@@ -1,0 +1,277 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    text-shadow: 0 0 20px #b9c4ff;
+    cursor: none;
+}
+.mouse{
+    width:  25px;
+    height: 36px;
+    background-image: url(mouseSpritesheet.png);
+    background-size: cover;
+    background-position: -5px 0;
+    animation: mouse 0.4s steps(2) infinite;
+    pointer-events: none;
+    position: fixed;
+    z-index: 100;
+    margin: -10px 0 0 -8px;
+}
+@keyframes mouse {
+    to{
+        background-position: -80px 0px;
+    }
+}
+
+@font-face { 
+    /* ① ここにfont-familyで指定したい名前を書く*/
+    font-family: "syunka"; 
+  
+    /* フォントが置かれているパスを書く */ 
+    src: url("font/春夏秋冬㈼.ttf") format("truetype") 
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: transparent;
+    scale: 2;
+  }
+input[type="range"]::-webkit-slider-runnable-track{
+    background-image: url(bar.PNG);
+    background-size: cover;
+    height: 10px;
+    width: 350px;
+    margin: 10px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    appearance:none;
+    height: 10px;
+    width: 6px;
+    background-image: url(barP.PNG);
+    background-size: cover;
+  }
+.backimg{
+    background-image: url(back.PNG);
+    position: absolute;
+    bottom: 0;
+    z-index: -10;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: top;
+    filter: drop-shadow(0 1px 40px hsla(214, 100%, 65%, 0.748)) ;
+}
+.iachara{
+    position: absolute;
+    top: 80%;
+    z-index: 2;
+    animation: startia 7.5s;
+    background-image: url(iachara.PNG);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.368));
+    transition: all 0.6s;
+}
+.iachara:hover{
+    filter: drop-shadow(2px 2px 10px rgba(255, 255, 255, 0.659));
+    transform: translateY(-10px);
+}
+@keyframes startia {
+    0%{opacity: 0;}
+    80%{opacity: 0;transform: translateX(-60px);}
+    100%{opacity: 1;transform: translateX(0px);}
+}
+.mute-btn{
+    background-image: url(play.PNG);
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+#mute:checked ~ .mute-btn{
+     background-image: url(mute.PNG);
+}
+.backPcimg{
+    background-image: url(backPc.PNG);
+    position: fixed;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: top;
+    animation: pcimg 2s;
+}
+.backPcimg-pr{
+    background-image: url(backPc2.PNG);
+}
+@keyframes pcimg {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes start {
+    0%{ filter: brightness(1)}
+    60%{ filter: brightness(1)}
+    100%{ filter: brightness(0.5)}
+}
+.popup-txt{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    
+}
+.ok-btn:hover{
+     color: #7d83c7;
+}
+.main-p{
+    overflow-y: scroll;
+    height: 100vh;
+}
+.Spopup{
+    display: none;
+}
+#supoira{
+    display: none;
+}
+#supoira:checked,
+#supoira:checked ~ .popup-txt{
+    display: none;
+}
+#supoira:checked ~ .Spopup{
+    display: block;
+}
+.logo{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    animation: startlogo 6.5s;
+}
+@keyframes startlogo {
+    0%{opacity: 0;}
+    80%{opacity: 0;transform: translateY(60px);}
+    100%{opacity: 1;transform: translateY(0px);}
+}
+#volume-ber{
+    position: absolute;
+    right: 130px;
+}
+.sub-title{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    animation: startsub 7.5s;
+    margin-bottom: 60px;
+}
+@keyframes startsub {
+    0%{opacity: 0;}
+    80%{opacity: 0;transform: translateX(60px);}
+    100%{opacity: 1;transform: translateX(0px);}
+}
+.main-txt{
+    color: white;
+    animation: starttxt 4s;
+    font-size: 40px;
+}
+@keyframes starttxt {
+    0%{display: none;}
+    100%{display: none;}
+}
+.txt-block{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 auto;
+    width: 100vh;
+}
+.info-memo{
+    width: 50%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.menu{
+    margin: 0 auto;
+    width: 60vh;
+    font-family: 'syunka';
+}
+input[name="tag-list"]{
+     display: none;
+}
+.page{
+    display: none;
+    background-image: url(note.jpeg);
+    background-size: 100%;
+    font-size: 30px;
+    background-position-y: -10px;
+    color: #321f00c4;
+    border-radius: 5px;
+    position: relative;
+    z-index: 3;
+    height: 800px;
+    padding: 30px;
+}
+#tag-info:checked ~ .p-info,
+#tag-skill:checked ~ .p-skill,
+#tag-item:checked ~ .p-item,
+#tag-memo:checked ~ .p-memo,
+#tag-nikki:checked ~ .p-nikki{
+    display: flex;
+}
+input[name="tag-list"] + label{
+    background-image: url(s.webp);
+    background-size: cover;
+    width: auto;
+    height: 140px;
+    display: inline-flex;
+    transform: translateY(60px);
+    z-index: 1;
+    position: relative;
+    pointer-events: visible;
+    transition: all 0.2s;
+    color: #321f00c4;
+    padding: 5px;
+}
+.copy-pc{
+    display: contents;
+}
+.memo-txt{
+    display: contents;
+}
+input[name="tag-list"] + label:hover{
+    transform: translateY(40px);
+}
+input[name="tag-list"]:checked + label{
+    z-index: 4;
+}
+.skill-info{
+    visibility: hidden;
+    font-size: 20px;
+    opacity: 0.8;
+}
+.skillName:hover ~ .skill-info{
+    visibility: visible;
+}
+.p-item{
+    flex-direction: column;
+}
+.p-memo{
+    line-height: 60px;
+}
+
+
+
+
+.tes{
+    height: 100vh;
+    background-color: #abd1ff;
+    position: relative;
+    z-index: -11;
+    animation: starttxt 4s;
+    display: none;
+}
