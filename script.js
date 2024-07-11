@@ -9,7 +9,7 @@ document.addEventListener('mousemove', function (e) {
     cursor.style.left = x + "px";
   });
 document.getElementById('bgm').volume = 0.13
-
+document.getElementById('bgm').pause()
 
 
 document.querySelectorAll(".menu-tag").forEach(v => v.addEventListener("change", (e) => {
