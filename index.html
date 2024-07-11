@@ -20,17 +20,17 @@
     <span class="sub-title">視界いっぱいに<br>　　ずっと海が一面に広がっている</span>
     <div class="main-txt">
        <div class="txt-block">
-        <img src="tatie.PNG" alt="立ち絵" height="600px"><p class="info-memo">HO2- <ruby>蓮吟 玄兎<rt>れんぎん　げんと</rt></ruby><br>あなたは海に囲まれた島で暮らしている。砂浜に打ち上げられているHO1を発見した。</p>
+        <img src="tatie.PNG" alt="立ち絵" height="600px" class="tatie-img"><p class="info-memo">HO2- <ruby>蓮吟 玄兎<rt>れんぎん　げんと</rt></ruby><br>あなたは海に囲まれた島で暮らしている。砂浜に打ち上げられているHO1を発見した。</p>
        </div>
        <div class="menu">
         <input type="radio" name="tag-list" class="menu-tag" id="tag-info" checked><label for="tag-info">詳細</label>
         <input type="radio" name="tag-list" class="menu-tag" id="tag-skill"><label for="tag-skill">技能</label>
         <input type="radio" name="tag-list" class="menu-tag" id="tag-item"><label for="tag-item">持ち物</label>
         <input type="radio" name="tag-list" class="menu-tag" id="tag-memo"><label for="tag-memo">メモ</label>
-        <input type="radio" name="tag-list" class="menu-tag" id="tag-nikki"><label for="tag-nikki">日記</label>
+        <input type="radio" name="tag-list" class="menu-tag" id="tag-nikki"><label for="tag-nikki" style="display: none;">日記</label>
         <div class="p-info page">
             <br><br>年齢:15才<br>誕生日:2月20日<br>瞳の色:海を写したかのような美しい青い眼<br>身長:153cm <br><br>ステータス<br>・SAN 70 ・HP 12 ・MP 14 ・DB -1D4 <br>・STR 6 ・CON 14 ・POW 14 ・DEX 16<br>・APP 11 ・SIZ 10 ・INT 15 ・EDU 12<br>
-    <br> <div class="copy-pc" onclick="copyPc()">キャラ駒コピー(未実装)</div>
+    <br> <div class="copy-pc" onclick="copyPc()">キャラ駒コピー</div>
         </div>
         <div class="p-skill page"><div id="skill-list" style="margin-top: 70px;"></div></div>
         <div class="p-item page"><br><br>
@@ -38,13 +38,23 @@
                 <img src="karinba.PNG" alt="カリンバ" style="width: 200px;"> <div style="max-width: 400px;"><p>カリンバ</p><span>細い金属棒を、指で弾いて演奏する楽器。島の木材で手作りした。17音を奏でることができチューニングも自由。</span></div>
             </div>
             <div style="margin:  10px 0; display: flex;flex-direction: row;align-items: flex-start;">
-                 <div style="max-width: 400px;"><p>スピアガン</p><span>木材とモリで手作りした魚獲り用のツール。武器としてステータスを見るなら飛距離の短いクロスボウ</span></div><img src="gun.PNG" alt="スピアガン" style="width: 200px;">
-            </div>
+                <div style="max-width: 400px;"><p>スピアガン</p><span>木材とモリで手作りした魚獲り用のツール。武器としてステータスを見るなら飛距離の短いクロスボウ</span></div><img src="gun.PNG" alt="スピアガン" style="width: 200px;">
+           </div>
+           <div style="margin:  10px 0; display: flex;flex-direction: row-reverse;align-items: flex-start;">
+            <div style="max-width: 400px;"><p>昼花火</p><span>カラフルな色のけむりを出す花火。夜に見る一般的な花火(夜花火)ではなく煙を出して楽しむもの。
+                他にも音を出す花火などがある。</span></div>
+       </div>
+       <div style="margin:  10px 0; display: flex;flex-direction: row;align-items: flex-start;">
+        <div style="max-width: 400px;"><p>色褪せた雑誌</p><span>誰が買って置いたのかもよくわからない工作系の雑誌。結構古い</span></div>
+   </div>
+   <div style="margin:  10px 0; display: flex;flex-direction: row-reverse;align-items: flex-start;">
+    <div style="max-width: 400px;"><p>木工ナイフ</p><span>工作用に持っている</span></div>
+</div>
         </div>
         <div class="p-memo page">
 <br>
 好奇心旺盛な男の子。<br>
-一人称は僕。海で遊んだり物を作って遊んだりするのが好き。手作りのカリンバを持ち歩いていてたまに演奏している。
+一人称は僕。海で遊んだり物を作って遊んだりするのが好き。手作りのカリンバを持ち歩いていてたまに演奏している。前に誰が買って置いたのかもよくわからない工作系の雑誌が家の本棚にあり気に入ってよく見ている。<s>DIY（工作）してて島住みなので実質あつ森。</s>
 好きな食べ物はチーズケーキ。モチーフは「ジェンツーペンギン」
 <br><br>
 島の名前:田文素伍井島
