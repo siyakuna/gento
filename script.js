@@ -8,6 +8,7 @@ document.addEventListener('mousemove', function (e) {
     cursor.style.top = y + "px";
     cursor.style.left = x + "px";
   });
+document.getElementById('bgm').volume = 0.13
 
 
 
