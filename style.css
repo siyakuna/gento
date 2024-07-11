@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    text-shadow: 0 0 20px #b9c4ff;
     cursor: none;
 }
 .mouse{
@@ -194,6 +193,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 50%;
     overflow-wrap: break-word;
     word-break: break-word;
+    text-shadow: 0px 0px 20px #00c6ff;
 }
 .menu{
     margin: 0 auto;
@@ -240,6 +240,9 @@ input[name="tag-list"] + label{
 .copy-pc{
     display: contents;
 }
+.copy-pc:hover{
+    color: #0095ff;
+}
 .memo-txt{
     display: contents;
 }
@@ -259,9 +262,11 @@ input[name="tag-list"]:checked + label{
 }
 .p-item{
     flex-direction: column;
+    font-size: 28px;
 }
 .p-memo{
-    line-height: 60px;
+    line-height: 50px;
+    flex-direction: column;
 }
 
 
