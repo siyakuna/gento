@@ -32,11 +32,12 @@ document.querySelectorAll(".menu-tag").forEach(v => v.addEventListener("change",
     }
   }));
   function copyPc(){//ココフォリア駒コピー
-    console.log('ok')
+    navigator.clipboard.writeText("");
+    alert('まだ未完成です。サーセン　立ち絵が全部できたら実装します')
   }
 let skillDate =[//技能値
     {name:"回避",point:62,syoki:32,syoku:30,syumi:0,hosei:0},
-    {name:"スピアガン",point:76,syoki:20,syoku:0,syumi:56,hosei:0},
+    {name:"スピアガン",point:30,syoki:20,syoku:0,syumi:10,hosei:0},
     {name:"応急手当",point:60,syoki:30,syoku:30,syumi:0,hosei:0},
     {name:"聞き耳",point:70,syoki:25,syoku:45,syumi:0,hosei:0},
     {name:"忍び歩き",point:60,syoki:10,syoku:50,syumi:0,hosei:0},
@@ -44,8 +45,24 @@ let skillDate =[//技能値
     {name:"図書館",point:60,syoki:25,syoku:0,syumi:35,hosei:0},
     {name:"目星",point:70,syoki:25,syoku:45,syumi:0,hosei:0},
     {name:"水泳",point:80,syoki:25,syoku:5,syumi:0,hosei:50},
+    {name:"芸術(工作)",point:51,syoki:5,syoku:0,syumi:46,hosei:0},
     {name:"芸術(カリンバ)",point:60,syoki:5,syoku:55,syumi:0,hosei:0},
 ]
+let random = Math.floor(Math.random() * 101);
+let gentoMsg = "それだけ"
+if(!sessionStorage.getItem('newload')){
+  random = 100
+}
+if(random <= 5){
+  document.getElementsByClassName('tatie-img')[0].src = "tatiebanana.PNG"
+  gentoMsg = "バナナ"
+}else{
+  if(random <= 30){
+    document.getElementsByClassName('tatie-img')[0].src = "tatieegao.PNG"
+  gentoMsg = "ほらね"
+}
+}
+sessionStorage.setItem("newload", "true");
 for(i = 0;i < skillDate.length; i++){//技能表示
     let new_element = document.createElement('div');
     new_element.insertAdjacentHTML("beforeend",`
@@ -69,3 +86,12 @@ window.addEventListener('DOMContentLoaded', function(){
     }
   }, 50);
 });
+
+
+
+
+console.log(
+  `%c蓮吟 玄兎%c:どうしたの？\n%c蓮吟 玄兎%c:ここには何もないよ\n%c蓮吟 玄兎%c:...\n%c蓮吟 玄兎%c:そうだなぁ\n%c蓮吟 玄兎%c:あ、特別に教えてあげる\n%c蓮吟 玄兎%c:このページを再読み込みすると確率で僕の立ち絵が変わるようになってるよ\n%c蓮吟 玄兎%c:...${gentoMsg}`
+  ,'color: rgb(99, 180, 255);',"",'color: rgb(99, 180, 255);',"",'color: rgb(99, 180, 255);',"",'color: rgb(99, 180, 255);',"",'color: rgb(99, 180, 255);',"",'color: rgb(99, 180, 255);',"",'color: rgb(99, 180, 255);',""
+)
+if(gentoMsg === "バナナ")document.getElementsByClassName('info-memo')[0].innerText = "バナナ"
