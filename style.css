@@ -61,6 +61,19 @@ input[type="range"]::-webkit-slider-thumb {
     background-position: top;
     filter: drop-shadow(0 1px 40px hsla(214, 100%, 65%, 0.748)) ;
 }
+.mail{
+    background: url(mail.PNG);
+    height: 60px;
+    width: 65px;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    top: 77%;
+    left: 60%;
+    z-index: 0;
+    display: none;
+}
+
 .iachara{
     position: absolute;
     top: 80%;
@@ -76,6 +89,16 @@ input[type="range"]::-webkit-slider-thumb {
 .iachara:hover{
     filter: drop-shadow(2px 2px 10px rgba(255, 255, 255, 0.659));
     transform: translateY(-10px);
+}
+.supoira{
+    background-image: url(Rock.PNG);
+    background-size: cover;
+    width: 60px;
+    height: 52px;
+    transition: all 0.6s;
+}
+.supoira:hover{
+    filter: drop-shadow(2px 2px 10px rgb(255, 255, 255));
 }
 @keyframes startia {
     0%{opacity: 0;}
@@ -215,6 +238,7 @@ input[name="tag-list"]{
     z-index: 3;
     height: 800px;
     padding: 30px;
+    flex-direction: column;
 }
 #tag-info:checked ~ .p-info,
 #tag-skill:checked ~ .p-skill,
