@@ -37,6 +37,24 @@ document.querySelectorAll(".menu-tag").forEach(v => v.addEventListener("change",
       `);
     alert('コピーしました')
   }
+  let supoira = true
+  function supoiraBtn(){
+    if(supoira){
+      document.getElementById('supoirabtn').style.backgroundImage = "url(Rock2.PNG)"
+      document.getElementsByClassName('mail')[0].style.display = "block"
+      document.getElementById('eye').innerHTML = '瞳の色:ドブのような濁った瞳 <br>END:1'
+      supoira = false
+    }else{
+      document.getElementById('supoirabtn').style.backgroundImage = "url(Rock.PNG)"
+      document.getElementsByClassName('mail')[0].style.display = "none"
+      document.getElementById('eye').innerHTML = '瞳の色:海を写したかのような美しい青い眼'
+      supoira = true
+    }
+  }
+  function mail(){
+    document.getElementsByClassName('mail')[0].style.zIndex = "-15"
+    document.getElementsByClassName('tegami')[0].style.display = ""
+  }
 let skillDate =[//技能値
     {name:"回避",point:62,syoki:32,syoku:30,syumi:0,hosei:0},
     {name:"スピアガン",point:30,syoki:20,syoku:0,syumi:10,hosei:0},
