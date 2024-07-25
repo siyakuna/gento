@@ -13,8 +13,9 @@
     <audio id="bgm"  autoplay loop><source src="mp3/水の声.mp3" type="audio/mp3"></audio>
     <div class="mouse" id="mouse"></div>
     <div class="backimg"></div> 
-    <input type="checkbox" name="supoira" id="supoira"><div class="popup-txt">海も枯れるまでHO2の秘匿を含みます表示しますか？(pc推奨)<label for="supoira" class="ok-btn"><br>はい</label></div><div class="Spopup">
-    <a href="https://iachara.com/view/9147049" class="iachara"></a><input type="checkbox" name="mute" id="mute" style="display: none;"><label for="mute" class="mute-btn sub-title"></label> <input type="range" name="volume" id="volume-ber" class="sub-title" max="100" min="0" value="13">   <div class="backPcimg"id="backimg"></div>
+    <button type="button" onclick="mail()" class="mail"></button>
+    <input type="checkbox" name="supoira" id="supoira"><div class="popup-txt">海も枯れるまでHO2の秘匿を含みます表示しますか？<label for="supoira" class="ok-btn"><br>はい</label></div><div class="Spopup">
+    <a href="https://iachara.com/view/9147049" class="iachara"></a>  <input type="checkbox" name="mute" id="mute" style="display: none;"><label for="mute" class="mute-btn sub-title"></label> <input type="range" name="volume" id="volume-ber" class="sub-title" max="100" min="0" value="13">   <div class="backPcimg"id="backimg"></div>
     <div class="main-p" id="main-p">
     <div class="logo"><img src="logo.PNG" alt="ロゴ" height="800px"></div>
     <span class="sub-title">視界いっぱいに<br>　　ずっと海が一面に広がっている</span>
@@ -27,10 +28,13 @@
         <input type="radio" name="tag-list" class="menu-tag" id="tag-skill"><label for="tag-skill">技能</label>
         <input type="radio" name="tag-list" class="menu-tag" id="tag-item"><label for="tag-item">持ち物</label>
         <input type="radio" name="tag-list" class="menu-tag" id="tag-memo"><label for="tag-memo">メモ</label>
-        <input type="radio" name="tag-list" class="menu-tag" id="tag-nikki"><label for="tag-nikki" style="display: none;">日記</label>
+        <input type="radio" name="tag-list" class="menu-tag" id="tag-nikki"><label for="tag-nikki" class="tegami" style="display: none;">手紙</label>
         <div class="p-info page">
-            <br><br>年齢:15才<br>誕生日:2月20日<br>瞳の色:海を写したかのような美しい青い眼<br>身長:153cm <br><br>ステータス<br>・SAN 70 ・HP 12 ・MP 14 ・DB -1D4 <br>・STR 6 ・CON 14 ・POW 14 ・DEX 16<br>・APP 11 ・SIZ 10 ・INT 15 ・EDU 12<br>
-    <br> <div class="copy-pc" onclick="copyPc()">キャラ駒コピー</div>
+            <br><br>年齢:15才<br>誕生日:2月20日<br><span id="eye"> 瞳の色:海を写したかのような美しい青い眼</span><br>身長:153cm <br><br>ステータス<br>・SAN 70 ・HP 12 ・MP 14 ・DB -1D4 <br>・STR 6 ・CON 14 ・POW 14 ・DEX 16<br>・APP 11 ・SIZ 10 ・INT 15 ・EDU 12<br>
+    <br> <div class="copy-pc" onclick="copyPc()">キャラ駒コピー</div><br><br><br>
+    <div>現行未通過NG シナリオネタバレ表示
+    <div class="supoira" id="supoirabtn" onclick="supoiraBtn()"></div>
+</div>
         </div>
         <div class="p-skill page"><div id="skill-list" style="margin-top: 70px;"></div></div>
         <div class="p-item page"><br><br>
@@ -59,7 +63,16 @@
 <br><br>
 島の名前:田文素伍井島
 </div>
-<div class="p-nikki page">oooo</div>
+<div class="p-nikki page">
+    <br><br>
+    めぐみさんへ<br><br>
+手紙を読んでる時僕はめぐみさんの近くにいるのかな？<br>
+もしかしたら居ないかもしれない　先のことだからよくわからないけどもし一緒なら今の僕は嬉しいな　めぐみさんと一緒にいると楽しんだよ<br>
+もし、読んでる時僕が近くにいなかったとしてもめぐみさんに出会えたこととっても嬉しかったよ<br>
+<br>
+僕はいつでも僕だからめぐみさんもめぐみさんでいてね<br><br>
+そうすれば僕は嬉しいから
+</div>
        </div>
        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
@@ -69,3 +82,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
